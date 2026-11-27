@@ -120,6 +120,10 @@ section[data-r]{position:relative}
 section[data-r]::before{content:"";position:absolute;left:14px;right:14px;top:0;height:6px;border-radius:0 0 8px 8px;background:linear-gradient(90deg,var(--a1),var(--a2));box-shadow:0 3px 8px var(--a1)}
 section[data-r] h2{display:flex;align-items:center;gap:10px;color:#2b2340;text-shadow:0 1px 0 #fff}
 section[data-r] h2::before{content:"";flex:0 0 46px;width:46px;height:46px;background:var(--ic) center/contain no-repeat,radial-gradient(circle at 35% 30%,#fff,var(--a2) 160%);border-radius:14px;box-shadow:0 4px 0 rgba(0,0,0,.08),0 8px 14px rgba(0,0,0,.12);background-size:78%,100%}
+section[data-r="vn"]{--a1:#e11d48;--a2:#fda4af;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Studio%20microphone/3D/studio_microphone_3d.png")}
+section[data-r="in"]{--a1:#16a34a;--a2:#86efac;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Mobile%20phone%20with%20arrow/3D/mobile_phone_with_arrow_3d.png")}
+section[data-r="rm"]{--a1:#ea580c;--a2:#fdba74;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Alarm%20clock/3D/alarm_clock_3d.png")}
+section[data-r="ce"]{--a1:#ca8a04;--a2:#fde68a;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Scroll/3D/scroll_3d.png")}
 section[data-r="hs"]{--a1:#7c3aed;--a2:#a78bfa;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Handshake/3D/handshake_3d.png")}
 section[data-r="xa"]{--a1:#16a34a;--a2:#86efac;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Seedling/3D/seedling_3d.png")}
 section[data-r="th"]{--a1:#8b5cf6;--a2:#ec4899;--ic:url("https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Thought%20balloon/3D/thought_balloon_3d.png")}
@@ -199,6 +203,31 @@ header h1{-webkit-text-stroke:1.2px rgba(110,50,0,.55);background:linear-gradien
 body.simple .shn,body.simple .twk,body.quiet .twk{display:none}
 body.simple header h1,body.simple #bnav button.on{animation:none}
 @media (prefers-reduced-motion:reduce){.shn,.twk{display:none}header h1,#bnav button.on{animation:none}}
+
+/* ---- नए हिस्से ---- */
+.shrb.alt2{background:linear-gradient(135deg,#f472b6,#a855f7)}
+.vnbox{display:flex;align-items:center;gap:14px;margin:10px 0}
+.vnrec{display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;border:0;font:inherit;font-weight:800;font-size:16px;background:linear-gradient(135deg,#fb7185,#e11d48);color:#fff;box-shadow:0 6px 18px rgba(225,29,72,.35);cursor:pointer}
+.vnrec.on{animation:micp 1s infinite;background:linear-gradient(135deg,#ef4444,#991b1b)}
+.vntm{font-size:22px;font-weight:800;color:#be123c;font-variant-numeric:tabular-nums}
+#vnpl{width:100%;margin:6px 0}.vnact{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.remt{display:flex;align-items:center;gap:12px;margin:10px 0}.remt input{font:inherit;font-size:20px;padding:8px 12px;border-radius:12px;border:2px solid #c4b5fd}
+.certbar{height:12px;border-radius:99px;background:#ede9fe;overflow:hidden;margin:8px 0}.certbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#f59e0b,#ec4899)}
+#certcv{width:100%;height:auto;border-radius:14px;margin-top:10px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.gmov{position:fixed;inset:0;z-index:9990;background:rgba(30,20,60,.55);display:flex;align-items:center;justify-content:center;padding:10px}
+.gmov[hidden]{display:none}
+.gmbox{position:relative;background:linear-gradient(160deg,#fff7ed,#fdf2f8 50%,#eef2ff);border-radius:24px;padding:16px;max-width:400px;width:100%;max-height:94vh;overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.gmx{position:absolute;right:10px;top:10px;border:0;background:#fff;border-radius:50%;width:36px;height:36px;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.gmtabs{display:flex;gap:6px;margin:4px 40px 10px 0;flex-wrap:wrap}.gmtabs button{border:0;border-radius:999px;padding:8px 12px;font:inherit;font-weight:700;background:#fff;color:#6b21a8;cursor:pointer}
+.gmtabs button.on{background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff}
+#bubcv{width:100%;height:auto;border-radius:18px;background:linear-gradient(180deg,#bae6fd,#e0f2fe 60%,#f0f9ff);touch-action:manipulation;display:block}
+#cldt{width:100%;box-sizing:border-box;font:inherit;padding:10px;border-radius:12px;border:2px solid #c4b5fd}
+.cldsky{position:relative;height:200px;border-radius:18px;margin-top:10px;background:linear-gradient(180deg,#7dd3fc,#e0f2fe);overflow:hidden}
+.cldsky .cl{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);background:#fff;border-radius:40px;padding:12px 18px;font-weight:700;color:#475569;box-shadow:0 6px 16px rgba(0,0,0,.12);max-width:80%;text-align:center;animation:cldf 6s ease-in forwards}
+.cldsky .cl::before{content:"☁️ "}
+@keyframes cldf{0%{bottom:10px;opacity:1}70%{opacity:.8}100%{bottom:230px;opacity:0;transform:translateX(-30%) scale(.6)}}
+.clrpal{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.clrpal button{width:34px;height:34px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer}.clrpal button.on{outline:3px solid #7c3aed}
+#mand{width:100%;height:auto;background:#fff;border-radius:18px}#mand path,#mand circle{stroke:#7c3aed;stroke-width:1;cursor:pointer;transition:fill .25s}
 </style>
 </head>
 <body><script>window.__vdErr=[];addEventListener('error',e=>{try{__vdErr.push(String(e.message)+' @'+e.lineno+':'+e.colno)}catch(x){}});addEventListener('message',e=>{try{if(e.data&&e.data.vdAsk)e.source.postMessage({vdErrs:__vdErr,ok:!!document.getElementById('codel')||!!window.ME,len:document.documentElement.outerHTML.length},'*')}catch(x){}});</script>
@@ -238,6 +267,7 @@ body.simple header h1,body.simple #bnav button.on{animation:none}
 <button type="button" data-free="br"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Wind%20face/3D/wind_face_3d.png" alt=""><b>4-7-8 साँस</b><small>2 मिनट</small></button>
 <button type="button" data-free="md"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Lotus/3D/lotus_3d.png" alt=""><b>ध्यान-संगीत</b><small>हिंदी · English</small></button>
 <button type="button" data-free="nw"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Crescent%20moon/3D/crescent_moon_3d.png" alt=""><b>नींद नहीं आ रही?</b><small>रात का शांत मोड</small></button>
+<button type="button" data-free="game"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Balloon/3D/balloon_3d.png" alt=""><b>मन हल्का करो</b><small>3 छोटे खेल</small></button>
 <button type="button" data-free="card"><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Love%20letter/3D/love_letter_3d.png" alt=""><b>आज का कार्ड</b><small>दोस्तों को भेजें</small></button>
 </div>
 <div class="frcta">पूरी डायरी, अपना साथी, प्रगति और डॉ. योगिता शर्मा (मनोवैज्ञानिक) से काउंसलिंग के लिए ऊपर <b>"शुरू करें"</b> दबाएँ 💜<br><a href="https://wa.me/919529674099?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%89%E0%A4%9C%E0%A4%BE%E0%A4%B8%20%E0%A4%95%E0%A4%BE%E0%A4%89%E0%A4%82%E0%A4%B8%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88" target="_blank" rel="noopener" class="frwa">💬 सेशन के लिए WhatsApp करें</a></div></section>
@@ -318,7 +348,7 @@ body.simple header h1,body.simple #bnav button.on{animation:none}
 <div class="sub">हफ़्ते में जो भी याद आए — यहाँ लिख दीजिए, ताकि सेशन में कुछ छूटे नहीं।</div>
 <textarea id="sntx" rows="2" placeholder="जैसे: ऑफ़िस में घबराहट वाली बात बतानी है"></textarea>
 <button class="ok" id="snadd" type="button" style="margin-top:6px">➕ जोड़ें</button><div id="snlist"></div><div class="sub" style="font-weight:700;margin-top:14px">⭐ पिछला सेशन कैसा लगा?</div><div class="fbst" id="fbst"></div><input type="text" id="fbtx" placeholder="कुछ कहना हो तो (वैकल्पिक)" style="margin-top:6px"><div class="sub" id="fbok"></div></section>
-<section data-tab="today" id="xas" data-r="xa"><h2>🌱 मेरे और अभ्यास</h2><button class="shrb alt" type="button" data-free="card" style="margin:6px 0 4px">💌 आज का कार्ड — दोस्तों को भेजें</button><button class="shrb" type="button" data-free="chk" style="margin:6px 0 4px;background:linear-gradient(135deg,#0ea5e9,#6366f1)">🩺 मन की जाँच (2 मिनट)</button>
+<section data-tab="today" id="xas" data-r="xa"><h2>🌱 मेरे और अभ्यास</h2><button class="shrb alt2" type="button" data-game="1" style="margin:6px 0 4px">🎮 मन हल्का करने वाले खेल</button><button class="shrb alt" type="button" data-free="card" style="margin:6px 0 4px">💌 आज का कार्ड — दोस्तों को भेजें</button><button class="shrb" type="button" data-free="chk" style="margin:6px 0 4px;background:linear-gradient(135deg,#0ea5e9,#6366f1)">🩺 मन की जाँच (2 मिनट)</button>
 <details class="xa" id="xgt"><summary><img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Folded%20hands/Default/3D/folded_hands_3d_default.png" alt=""> कृतज्ञता — आज की 3 अच्छी बातें <i id="xgtk"></i></summary>
 <div class="sub">छोटी से छोटी बात भी चलेगी — जैसे "चाय अच्छी बनी", "दोस्त का फ़ोन आया"।</div>
 <input type="text" id="gt1" placeholder="1. "><input type="text" id="gt2" placeholder="2. "><input type="text" id="gt3" placeholder="3. ">
@@ -336,6 +366,12 @@ body.simple header h1,body.simple #bnav button.on{animation:none}
 <div class="sub">आज कितनी देर टहले / हल्की कसरत की?</div><div class="chips" id="wkm"></div>
 <div class="sub" style="margin-top:8px">आज कम से कम 10 मिनट धूप ली?</div><div class="chips" id="wks"></div></details>
 </section>
+<section data-tab="today" id="vns" data-r="vn"><h2>🎙️ बोलकर डायरी</h2>
+<div class="sub">लिखने का मन न हो? बस बोलिए — आपकी आवाज़ सीधे डॉ. योगिता शर्मा तक पहुँचेगी (और कोई नहीं सुन सकता)। 3 मिनट तक।</div>
+<div class="vnbox"><button type="button" id="vnrec" class="vnrec">🎙️<span>रिकॉर्ड शुरू करें</span></button><div id="vntm" class="vntm" hidden>0:00</div></div>
+<audio id="vnpl" controls hidden></audio>
+<div class="vnact" id="vnact" hidden><button type="button" class="shrb" id="vnsend">📤 डॉक्टर को भेजें</button><button type="button" class="shrb alt" id="vnagain">🔁 दोबारा बोलें</button></div>
+<div class="sub" id="vnst"></div><div class="sub" id="vncount"></div></section>
 <section data-tab="today" id="mds" data-r="md"><h2>🧘 रोज़ का ध्यान</h2>
 <div class="sub">आराम से बैठें, ईयरफ़ोन लगाएँ और कोई एक ध्यान चुनें। आवाज़ वाले ध्यान में बस सुनते जाएँ; बिना बोल वाले संगीत में समय भी चुन सकते हैं।</div>
 <div id="mdtw" hidden><div class="sub" style="margin-top:10px">⏱️ कितनी देर ध्यान करना है?</div><div class="chips" id="mdt"></div></div>
@@ -375,7 +411,12 @@ body.simple header h1,body.simple #bnav button.on{animation:none}
 <div class="sub">आज के दिन से आप कितने संतुष्ट हैं?</div>
 <div class="scn stsc" id="stsc"></div><div class="joy" id="sat"></div>
 </section></div>
-<div data-tab="settings"><section id="thp"><h2>🎨 मेरी थीम</h2><div class="sub">जो थीम पसंद हो उस पर दबाएँ — या "हर दिन नई" चुनें, तो रोज़ अपने आप बदलेगी।</div><div class="thg" id="thg"></div></section><section id="prv"><h2>🔒 गोपनीयता और आसान रूप</h2>
+<div data-tab="settings"><section id="thp"><h2>🎨 मेरी थीम</h2><div class="sub">जो थीम पसंद हो उस पर दबाएँ — या "हर दिन नई" चुनें, तो रोज़ अपने आप बदलेगी।</div><div class="thg" id="thg"></div></section><section id="insts" data-r="in"><h2>📲 उजास को फ़ोन में रखें</h2><div class="sub">एक बटन दबाइए — उजास आपके फ़ोन की होम स्क्रीन पर असली ऐप की तरह आ जाएगा। फिर रोज़ बस उसके निशान पर छूकर खोलें।</div>
+<button type="button" class="shrb" id="instb">📲 फ़ोन में डालें</button><div class="sub" id="insth"></div></section>
+<section id="rems" data-r="rm"><h2>⏰ रोज़ की याद</h2><div class="sub">कौन-से समय डायरी लिखने की याद चाहिए? चुनिए — आपके फ़ोन के कैलेंडर में रोज़ उसी समय याद आएगी।</div>
+<div class="remt"><input type="time" id="remtm" value="21:00"><span id="remlb"></span></div>
+<button type="button" class="shrb" id="remg">📅 Google कैलेंडर में जोड़ें</button><button type="button" class="shrb alt" id="remi">📥 फ़ोन के कैलेंडर में जोड़ें (फ़ाइल)</button><div class="sub" id="remst"></div></section>
+<section id="prv"><h2>🔒 गोपनीयता और आसान रूप</h2>
 <div class="sub" style="font-weight:700">🔒 ऐप पर ताला</div><div class="sub">ऐप खोलते समय 4 अंक का ताला — ताकि आपकी डायरी कोई और न पढ़ सके। (यह ताला सिर्फ़ इसी फ़ोन पर रहता है)</div>
 <div id="lkst" class="sub"></div><input type="password" inputmode="numeric" maxlength="4" id="lkp" placeholder="नया 4 अंक का ताला" autocomplete="off" style="max-width:220px"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px"><button class="ok" id="lkset" type="button">🔒 ताला लगाएँ</button><button class="sm" id="lkoff" type="button">ताला हटाएँ</button></div>
 <div class="sub" style="font-weight:700;margin-top:16px">🧘 सरल रूप</div><div class="sub">मन भारी हो या बहुत कुछ एक साथ भारी लगे — तो सिर्फ़ ज़रूरी हिस्से दिखाएँ।</div>
@@ -393,7 +434,9 @@ body.simple header h1,body.simple #bnav button.on{animation:none}
 <section><button class="ok" id="out" style="width:100%;background:var(--neg)">बाहर निकलें (लॉग आउट)</button></section>
 <p class="foot">© 2026 डॉ. योगिता शर्मा · उजास काउंसलिंग एवं वेलबीइंग सेंटर। सर्वाधिकार सुरक्षित।<br>मदद चाहिए? भारत में Tele-MANAS: 14416 (मुफ़्त, 24 घंटे) · भारत के बाहर: अपने देश की हेल्पलाइन</p>
 </div>
-<div data-tab="progress"><section id="bdg"><h2>🏅 मेरे बैज</h2><div class="sub">छोटे-छोटे कदमों का जश्न 🎉</div><div class="bdgs" id="bdgs"></div></section><section id="wkch"><h2>📈 मेरा हफ़्ता</h2><div class="sub">पिछले 7 दिन — मूड, नींद और संतुष्टि एक साथ। देखिए किस चीज़ का किस पर असर पड़ता है।</div><div id="wkchart"></div><div class="wkins" id="wkins"></div></section><section id="lrn"><h2>📚 सीखने का कोना</h2><div class="sub">छोटे, आसान लेख — मन को समझने के लिए।</div><details class="xa lr"><summary><span class="lri">😟</span> चिंता (Anxiety) क्या है?</summary><p>चिंता शरीर का "ख़तरे का अलार्म" है — दिल तेज़ धड़कना, पेट में घबराहट, बेचैनी। थोड़ी चिंता सामान्य और उपयोगी है। जब यह अलार्म बिना ख़तरे के बार-बार बजे, तब मुश्किल होती है।</p><p>क्या मदद करता है: धीमी साँस (छोड़ने वाली साँस लंबी), 5-4-3-2-1, चिंता को लिखकर "चिंता का समय" तय करना, और डर वाली चीज़ से धीरे-धीरे सामना करना — भागने से चिंता बढ़ती है।</p></details><details class="xa lr"><summary><span class="lri">🌧️</span> उदासी या डिप्रेशन — फ़र्क क्या है?</summary><p>उदासी कुछ दिनों में हल्की हो जाती है। अगर 2 हफ़्ते से ज़्यादा लगभग रोज़ मन उदास रहे, किसी चीज़ में मज़ा न आए, नींद-भूख बदल जाए, थकान रहे या ख़ुद को बेकार लगे — तो यह डिप्रेशन के संकेत हो सकते हैं।</p><p>यह कमज़ोरी नहीं, इलाज होने वाली स्थिति है। छोटे-छोटे काम करना (भले मन न हो), धूप-टहलना, लोगों से जुड़ना और काउंसलिंग — सब मदद करते हैं।</p></details><details class="xa lr"><summary><span class="lri">💭</span> विचार → भावना → व्यवहार (CBT)</summary><p>घटना हमें सीधे दुखी नहीं करती — घटना के बारे में हमारा विचार करता है। जैसे दोस्त ने जवाब नहीं दिया: "वो मुझसे नाराज़ है" → दुख; "शायद व्यस्त है" → सामान्य।</p><p>विचार डायरी यही सिखाती है: विचार को पकड़ें, पूछें "इसका सबूत क्या है? कोई और नज़रिया?", फिर संतुलित विचार लिखें।</p></details><details class="xa lr"><summary><span class="lri">😴</span> अच्छी नींद की आदतें</summary><p>रोज़ एक ही समय पर सोना-उठना (छुट्टी में भी)। सोने से 1 घंटा पहले फ़ोन-टीवी बंद। शाम के बाद चाय-कॉफ़ी कम। बिस्तर सिर्फ़ सोने के लिए।</p><p>20 मिनट में नींद न आए तो उठकर धीमी रोशनी में कुछ शांत करें, नींद आने पर लौटें। रात में थोड़ी देर जागना सामान्य है — घड़ी बार-बार न देखें।</p></details><details class="xa lr"><summary><span class="lri">😤</span> ग़ुस्से को कैसे संभालें</summary><p>ग़ुस्सा भी एक सामान्य भावना है — समस्या उसमें किया गया व्यवहार है। शरीर के संकेत पहचानें (जबड़ा कसना, गर्मी लगना)।</p><p>तुरंत: बोलने से पहले 10 तक गिनें, जगह से थोड़ी देर हट जाएँ, धीमी साँस लें। बाद में शांत होकर "मैं" वाले वाक्य बोलें: "मुझे बुरा लगा जब…"।</p></details><details class="xa lr"><summary><span class="lri">🆘</span> कब तुरंत मदद लें</summary><p>अगर ख़ुद को नुकसान पहुँचाने या जीवन ख़त्म करने के विचार आएँ, या कोई और ख़तरे में हो — इंतज़ार न करें। अभी Tele-MANAS 14416 (मुफ़्त, 24 घंटे) पर बात करें, या 112 पर कॉल करें, और डॉ. योगिता को बताएँ।</p><p>ऐप में ऊपर लाल "🆘 मदद" बटन हमेशा है।</p></details></section>
+<div data-tab="progress"><section id="bdg"><h2>🏅 मेरे बैज</h2><div class="sub">छोटे-छोटे कदमों का जश्न 🎉</div><div class="bdgs" id="bdgs"></div></section><section id="certs" data-r="ce"><h2>📜 मेरा प्रमाण-पत्र</h2><div class="sub" id="certtx"></div><div class="certbar"><i id="certbar"></i></div>
+<button type="button" class="shrb" id="certmk" hidden>📜 मेरा प्रमाण-पत्र बनाएँ</button><button type="button" class="shrb alt" id="certpv">👀 नमूना देखें</button>
+<div id="certout" hidden><canvas id="certcv" width="1080" height="1350"></canvas><button type="button" class="shrb" id="certsh">💌 WhatsApp पर भेजें / सेव करें</button></div></section><section id="wkch"><h2>📈 मेरा हफ़्ता</h2><div class="sub">पिछले 7 दिन — मूड, नींद और संतुष्टि एक साथ। देखिए किस चीज़ का किस पर असर पड़ता है।</div><div id="wkchart"></div><div class="wkins" id="wkins"></div></section><section id="lrn"><h2>📚 सीखने का कोना</h2><div class="sub">छोटे, आसान लेख — मन को समझने के लिए।</div><details class="xa lr"><summary><span class="lri">😟</span> चिंता (Anxiety) क्या है?</summary><p>चिंता शरीर का "ख़तरे का अलार्म" है — दिल तेज़ धड़कना, पेट में घबराहट, बेचैनी। थोड़ी चिंता सामान्य और उपयोगी है। जब यह अलार्म बिना ख़तरे के बार-बार बजे, तब मुश्किल होती है।</p><p>क्या मदद करता है: धीमी साँस (छोड़ने वाली साँस लंबी), 5-4-3-2-1, चिंता को लिखकर "चिंता का समय" तय करना, और डर वाली चीज़ से धीरे-धीरे सामना करना — भागने से चिंता बढ़ती है।</p></details><details class="xa lr"><summary><span class="lri">🌧️</span> उदासी या डिप्रेशन — फ़र्क क्या है?</summary><p>उदासी कुछ दिनों में हल्की हो जाती है। अगर 2 हफ़्ते से ज़्यादा लगभग रोज़ मन उदास रहे, किसी चीज़ में मज़ा न आए, नींद-भूख बदल जाए, थकान रहे या ख़ुद को बेकार लगे — तो यह डिप्रेशन के संकेत हो सकते हैं।</p><p>यह कमज़ोरी नहीं, इलाज होने वाली स्थिति है। छोटे-छोटे काम करना (भले मन न हो), धूप-टहलना, लोगों से जुड़ना और काउंसलिंग — सब मदद करते हैं।</p></details><details class="xa lr"><summary><span class="lri">💭</span> विचार → भावना → व्यवहार (CBT)</summary><p>घटना हमें सीधे दुखी नहीं करती — घटना के बारे में हमारा विचार करता है। जैसे दोस्त ने जवाब नहीं दिया: "वो मुझसे नाराज़ है" → दुख; "शायद व्यस्त है" → सामान्य।</p><p>विचार डायरी यही सिखाती है: विचार को पकड़ें, पूछें "इसका सबूत क्या है? कोई और नज़रिया?", फिर संतुलित विचार लिखें।</p></details><details class="xa lr"><summary><span class="lri">😴</span> अच्छी नींद की आदतें</summary><p>रोज़ एक ही समय पर सोना-उठना (छुट्टी में भी)। सोने से 1 घंटा पहले फ़ोन-टीवी बंद। शाम के बाद चाय-कॉफ़ी कम। बिस्तर सिर्फ़ सोने के लिए।</p><p>20 मिनट में नींद न आए तो उठकर धीमी रोशनी में कुछ शांत करें, नींद आने पर लौटें। रात में थोड़ी देर जागना सामान्य है — घड़ी बार-बार न देखें।</p></details><details class="xa lr"><summary><span class="lri">😤</span> ग़ुस्से को कैसे संभालें</summary><p>ग़ुस्सा भी एक सामान्य भावना है — समस्या उसमें किया गया व्यवहार है। शरीर के संकेत पहचानें (जबड़ा कसना, गर्मी लगना)।</p><p>तुरंत: बोलने से पहले 10 तक गिनें, जगह से थोड़ी देर हट जाएँ, धीमी साँस लें। बाद में शांत होकर "मैं" वाले वाक्य बोलें: "मुझे बुरा लगा जब…"।</p></details><details class="xa lr"><summary><span class="lri">🆘</span> कब तुरंत मदद लें</summary><p>अगर ख़ुद को नुकसान पहुँचाने या जीवन ख़त्म करने के विचार आएँ, या कोई और ख़तरे में हो — इंतज़ार न करें। अभी Tele-MANAS 14416 (मुफ़्त, 24 घंटे) पर बात करें, या 112 पर कॉल करें, और डॉ. योगिता को बताएँ।</p><p>ऐप में ऊपर लाल "🆘 मदद" बटन हमेशा है।</p></details></section>
 <section>
 <h2 id="calh"></h2>
 <div class="sub" id="calx"></div>
@@ -1340,6 +1383,100 @@ async function setLang(l){LANG=l;$('langn').textContent=(LANGS[l]||'').replace(/
   if(ALL.some(x=>!DICT[x])&&!Object.keys(DICT).length)$('lmsg').textContent='अनुवाद नहीं हो पाया, हिन्दी में दिखा रहे हैं';else $('lmsg').textContent=''}
  langApply()}
 function langApply(){applyStatic();setTab(reg);brChips();const cr=chosen('actsR');$('actsR').innerHTML='';actBoxes('actsR',cr.length?cr:Object.keys(MODS));if(ME){$('actsA').innerHTML='';render();remLink();tCard();voDraw();medDraw();chPick();frDraw()}if(TP)tDraw();try{if(GUEST&&!ME)$('go').textContent=tr('शुरू करें')}catch(x){}}
+/* ---- 📲 फ़ोन में डालें ---- */
+let INSTP=null;addEventListener('beforeinstallprompt',e=>{e.preventDefault();INSTP=e});
+const GHURL='https:\/\/ujaas-app.github.io';
+const isStand=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
+const isIOS=()=>/iphone|ipad|ipod/i.test(navigator.userAgent||'');
+function instDraw(){const b=$('instb'),h=$('insth');if(!b)return;if(isStand()){b.hidden=true;h.innerHTML='✅ '+esc(tr('उजास आपके फ़ोन में पहले से है — शाबाश!'));return}b.hidden=false}
+document.addEventListener('click',async e=>{if(!e.target.closest('#instb'))return;const h=$('insth');
+ if(INSTP){try{INSTP.prompt();const r=await INSTP.userChoice;INSTP=null;h.innerHTML=r&&r.outcome==='accepted'?'🎉 '+esc(tr('हो गया! अब होम स्क्रीन पर उजास का निशान देखिए।')):esc(tr('कोई बात नहीं — जब चाहें फिर दबाइए।'))}catch(x){}return}
+ if(/googleusercontent\.com$/.test(location.hostname)){h.innerHTML=esc(tr('फ़ोन में डालने के लिए उजास को यहाँ खोलिए, फिर वहाँ यही बटन दबाइए:'))+'<br><a href="'+GHURL+'" target="_blank" rel="noopener" style="font-weight:800;color:#6d28d9">ujaas-app.github.io ➜</a>';return}
+ if(isIOS()){h.innerHTML=esc(tr('iPhone पर: नीचे बीच में ⬆️ (Share) दबाएँ → "Add to Home Screen" चुनें → "Add" दबाएँ।'));return}
+ h.innerHTML=esc(tr('Chrome में ऊपर दाएँ ⋮ (तीन बिंदु) दबाएँ → "Add to Home screen" या "Install app" चुनें।'))});
+/* ---- ⏰ रोज़ की याद ---- */
+function remLbl(){const t=($('remtm')||{}).value||'21:00';const [h,m]=t.split(':').map(Number);const l=$('remlb');if(l)l.textContent=(h%12||12)+':'+String(m).padStart(2,'0')+' '+(h<12?tr('सुबह'):h<17?tr('दोपहर'):h<20?tr('शाम'):tr('रात'))}
+function remInit(){const i=$('remtm');if(!i||i.dataset.ok)return;i.dataset.ok=1;const v=lsG('vdrem');if(v)i.value=v;remLbl();i.addEventListener('change',()=>{lsS('vdrem',i.value);remLbl()})}
+function remParts(){const t=($('remtm').value||'21:00').split(':').map(Number);const d=new Date();d.setDate(d.getDate()+(d.getHours()*60+d.getMinutes()>=t[0]*60+t[1]?1:0));d.setHours(t[0],t[1],0,0);const p=n=>String(n).padStart(2,'0');
+ const f=x=>x.getFullYear()+p(x.getMonth()+1)+p(x.getDate())+'T'+p(x.getHours())+p(x.getMinutes())+'00';const e=new Date(d.getTime()+10*60e3);return [f(d),f(e)]}
+const REMT=()=>tr('✍️ उजास: आज की डायरी लिखने का समय'),REMD=()=>tr('बस 5 मिनट अपने मन के लिए 💜 उजास खोलिए:')+' '+GHURL;
+document.addEventListener('click',e=>{const g=e.target.closest('#remg'),ic=e.target.closest('#remi');if(!g&&!ic)return;const [a,b]=remParts();lsS('vdrem',$('remtm').value);
+ if(g){const u='https:\/\/calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(REMT())+'&details='+encodeURIComponent(REMD())+'&dates='+a+'%2F'+b+'&ctz=Asia%2FKolkata&recur='+encodeURIComponent('RRULE:FREQ=DAILY');window.open(u,'_blank');$('remst').textContent=tr('खुले पेज पर "Save" दबाइए — बस हो गया ✅');return}
+ const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-\/\/Ujaas\/\/HI','BEGIN:VEVENT','UID:ujaas-'+Date.now()+'@ujaas','DTSTAMP:'+a+'Z','DTSTART;TZID=Asia/Kolkata:'+a,'DTEND;TZID=Asia/Kolkata:'+b,'RRULE:FREQ=DAILY','SUMMARY:'+REMT(),'DESCRIPTION:'+REMD(),'BEGIN:VALARM','TRIGGER:-PT0M','ACTION:DISPLAY','DESCRIPTION:'+REMT(),'END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+ try{const bl=new Blob([ics],{type:'text/calendar'}),x=document.createElement('a');x.href=URL.createObjectURL(bl);x.download='ujaas yaad.ics';document.body.appendChild(x);x.click();setTimeout(()=>{URL.revokeObjectURL(x.href);x.remove()},4000);$('remst').textContent=tr('फ़ाइल डाउनलोड हुई — उसे खोलिए और "जोड़ें/Add" दबाइए ✅')}catch(x){$('remst').textContent=tr('यहाँ नहीं हो पाया — ऊपर वाला Google कैलेंडर बटन दबाइए')}});
+/* ---- 🎙️ बोलकर डायरी ---- */
+let VNR=null,VNC=[],VNB=null,VNT0=0,VNI=null,VNS=null,VNM='';
+function vnCount(){const c=$('vncount');if(!c||!ME)return;const n=E.filter(x=>x.cat==='vn'&&x.date===TODAY).length;c.textContent=n?'✅ '+tr('आज')+' '+n+' '+tr('आवाज़ संदेश भेजे'):''}
+function vnStopAll(){try{VNR&&VNR.state!=='inactive'&&VNR.stop()}catch(e){}try{VNS&&VNS.getTracks().forEach(t=>t.stop())}catch(e){}clearInterval(VNI)}
+function vnUI(rec){const b=$('vnrec');b.classList.toggle('on',rec);b.querySelector('span').textContent=rec?tr('रोकें ⏹'):tr('रिकॉर्ड शुरू करें');$('vntm').hidden=!rec}
+document.addEventListener('click',async e=>{
+ if(e.target.closest('#vnrec')){const st=$('vnst');if(VNR&&VNR.state==='recording'){VNR.stop();return}
+  if(!navigator.mediaDevices||!window.MediaRecorder){st.innerHTML=esc(tr('इस फ़ोन/ब्राउज़र में रिकॉर्डिंग नहीं चलती — Chrome में खोलिए।'));return}
+  try{VNS=await navigator.mediaDevices.getUserMedia({audio:true})}catch(x){st.innerHTML='🎙️ '+esc(tr('माइक की इजाज़त नहीं मिली।'))+(/googleusercontent\.com$/.test(location.hostname)?' '+esc(tr('यह लिंक माइक नहीं खोलने देता — उजास यहाँ खोलिए:'))+' <a href="'+GHURL+'" target="_blank" rel="noopener" style="font-weight:800;color:#6d28d9">ujaas-app.github.io ➜</a>':' '+esc(tr('ऊपर पूछे तो "Allow" दबाइए।')));return}
+  VNM=['audio/webm;codecs=opus','audio/webm','audio/mp4','audio/ogg'].find(m=>{try{return MediaRecorder.isTypeSupported(m)}catch(x){return false}})||'';
+  VNC=[];VNR=new MediaRecorder(VNS,VNM?{mimeType:VNM,audioBitsPerSecond:32000}:undefined);VNR.ondataavailable=ev=>{if(ev.data&&ev.data.size)VNC.push(ev.data)};
+  VNR.onstop=()=>{vnStopAll();vnUI(false);VNB=new Blob(VNC,{type:VNR.mimeType||VNM||'audio/webm'});const a=$('vnpl');a.src=URL.createObjectURL(VNB);a.hidden=false;$('vnact').hidden=false;st.textContent=tr('सुनकर देखिए — ठीक लगे तो "डॉक्टर को भेजें" दबाइए।')};
+  try{window.__stopTalk&&window.__stopTalk();speechSynthesis.cancel()}catch(x){}
+  VNR.start(1000);VNT0=Date.now();vnUI(true);st.textContent=tr('बोलिए… मैं सुन रही हूँ 🎙️');$('vnact').hidden=true;$('vnpl').hidden=true;
+  VNI=setInterval(()=>{const s=Math.floor((Date.now()-VNT0)/1000);$('vntm').textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');if(s>=180)VNR.stop()},500);return}
+ if(e.target.closest('#vnagain')){VNB=null;$('vnpl').hidden=true;$('vnact').hidden=true;$('vnst').textContent='';return}
+ if(e.target.closest('#vnsend')){if(!VNB||!ME)return;const st=$('vnst'),btn=$('vnsend');btn.disabled=true;st.textContent=tr('भेज रहे हैं…');const secs=Math.round((Date.now()-VNT0)/1000);
+  try{const b64=await new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(',')[1]);r.onerror=no;r.readAsDataURL(VNB)});
+   const id=await run('saveVoice',ME.code,PIN,b64,VNB.type,secs,TODAY);E.push({date:TODAY,cat:'vn',text:'',id:String(id)});VNB=null;$('vnpl').hidden=true;$('vnact').hidden=true;st.textContent='✅ '+tr('भेज दिया! डॉ. योगिता शर्मा इसे सुनेंगी। 💜');vnCount();try{say('x')}catch(x){}}
+  catch(x){st.textContent=tr('अभी नहीं भेज पाए — इंटरनेट देखकर फिर दबाइए।')}btn.disabled=false}});
+/* ---- 📜 प्रमाण-पत्र ---- */
+function certInfo(){const target=Number(ME&&ME.days)||30;let dayN=1;try{dayN=Math.floor((new Date(TODAY+'T12:00:00')-new Date(String(ME.start).replace(/^'/,'')+'T12:00:00'))/864e5)+1}catch(e){}
+ const filled=new Set(E.map(x=>x.date)).size;return {target,dayN:Math.max(1,dayN||1),filled,ready:dayN>=target}}
+function certDraw0(){const t=$('certtx');if(!t||!ME)return;const c=certInfo();$('certbar').style.width=Math.min(100,Math.round(Math.min(c.dayN,c.target)/c.target*100))+'%';
+ $('certmk').hidden=!c.ready;t.textContent=c.ready?'🎉 '+tr('बधाई हो! आपकी यात्रा पूरी हुई — अपना प्रमाण-पत्र बनाइए।'):tr('आज दिन')+' '+c.dayN+' / '+c.target+' · '+(c.target-c.dayN+1)+' '+tr('दिन और — फिर आपका प्रमाण-पत्र तैयार होगा 🌟')}
+function certPaint(sample){const cv=$('certcv'),x=cv.getContext('2d'),W=1080,H=1350,c=certInfo(),F=getComputedStyle(document.body).fontFamily||'sans-serif';
+ const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#fffaf0');g.addColorStop(1,'#fdf2f8');x.fillStyle=g;x.fillRect(0,0,W,H);
+ x.strokeStyle='#d4a017';x.lineWidth=14;x.strokeRect(30,30,W-60,H-60);x.strokeStyle='#f1c75b';x.lineWidth=4;x.strokeRect(58,58,W-116,H-116);
+ x.textAlign='center';x.fillStyle='#c2410c';x.font='700 84px '+F;x.fillText('✦ उजास ✦',W/2,200);x.fillStyle='#7c3aed';x.font='500 34px '+F;x.fillText('काउंसलिंग एवं वेलबीइंग सेंटर',W/2,255);
+ x.font='130px '+F;x.fillText('🪷',W/2,420);x.fillStyle='#9d174d';x.font='800 92px '+F;x.fillText(tr('प्रमाण-पत्र'),W/2,560);
+ x.fillStyle='#475569';x.font='500 38px '+F;x.fillText(tr('यह प्रमाणित किया जाता है कि'),W/2,650);
+ x.fillStyle='#1e1b4b';x.font='800 72px '+F;x.fillText(String(ME.name||'').slice(0,26),W/2,750);x.strokeStyle='#e9d5ff';x.lineWidth=3;x.beginPath();x.moveTo(220,780);x.lineTo(W-220,780);x.stroke();
+ x.fillStyle='#475569';x.font='500 38px '+F;x.fillText(tr('ने')+' '+c.target+' '+tr('दिन की "विचार डायरी" यात्रा पूरी की'),W/2,850);
+ x.font='500 32px '+F;x.fillStyle='#6b21a8';x.fillText(c.filled+' '+tr('दिन अपने मन के लिए समय निकाला 💜'),W/2,905);
+ const d=new Date(TODAY+'T12:00:00');x.fillStyle='#475569';x.font='500 30px '+F;x.fillText(tr('दिनांक')+': '+String(d.getDate()).padStart(2,'0')+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+d.getFullYear(),W/2,990);
+ x.strokeStyle='#94a3b8';x.lineWidth=2;x.beginPath();x.moveTo(W/2-200,1110);x.lineTo(W/2+200,1110);x.stroke();x.fillStyle='#1e1b4b';x.font='700 40px '+F;x.fillText('डॉ. योगिता शर्मा',W/2,1160);x.fillStyle='#64748b';x.font='500 30px '+F;x.fillText('मनोवैज्ञानिक · उजास',W/2,1205);
+ if(sample){x.save();x.translate(W/2,H/2);x.rotate(-0.5);x.fillStyle='rgba(225,29,72,.16)';x.font='900 230px '+F;x.fillText(tr('नमूना'),0,80);x.restore()}
+ $('certout').hidden=false;$('certsh').hidden=!!sample;cv.scrollIntoView({behavior:'smooth',block:'center'})}
+document.addEventListener('click',async e=>{if(e.target.closest('#certpv')){certPaint(true);return}if(e.target.closest('#certmk')){certPaint(false);try{say('all')}catch(x){}return}
+ if(e.target.closest('#certsh')){const cv=$('certcv');cv.toBlob(async b=>{const f=new File([b],'ujaas praman patra.png',{type:'image/png'});
+  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],text:tr('मैंने उजास के साथ अपनी विचार डायरी यात्रा पूरी की! 🌟')});return}}catch(x){}
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='ujaas praman patra.png';document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),3000)},'image/png')}});
+/* ---- 🎮 मन हल्का करने वाले खेल ---- */
+let GMRAF=0,BUBS=[],BUBN=0,GMAC=null;
+function gmSnd(f){try{if(window.__grOn||window.__mvOn||window.__brOn||window.__nwOn)return;GMAC=GMAC||new (window.AudioContext||window.webkitAudioContext)();const t=GMAC.currentTime,o=GMAC.createOscillator(),g=GMAC.createGain();o.type='sine';o.frequency.setValueAtTime(f,t);o.frequency.exponentialRampToValueAtTime(f*1.8,t+.09);g.gain.setValueAtTime(.12,t);g.gain.exponentialRampToValueAtTime(.0001,t+.18);o.connect(g).connect(GMAC.destination);o.start(t);o.stop(t+.2)}catch(e){}}
+function gmTab(k){document.querySelectorAll('.gmtabs button').forEach(b=>b.classList.toggle('on',b.dataset.gm===k));['bub','cld','clr'].forEach(x=>$('gm-'+x).hidden=x!==k);cancelAnimationFrame(GMRAF);if(k==='bub')bubStart();if(k==='clr'&&!$('mand').childNodes.length)mandDraw()}
+function gmOpen(){const o=$('gmov');o.hidden=false;document.body.style.overflow='hidden';try{window.__stopTalk&&window.__stopTalk()}catch(e){}gmTab('bub')}
+function gmClose(){$('gmov').hidden=true;document.body.style.overflow='';cancelAnimationFrame(GMRAF)}
+function bubStart(){const cv=$('bubcv'),x=cv.getContext('2d'),W=cv.width,H=cv.height,C=['#f9a8d4','#a5b4fc','#86efac','#fde68a','#c4b5fd','#7dd3fc'];BUBS=[];
+ const add=()=>BUBS.push({x:30+Math.random()*(W-60),y:H+30,r:16+Math.random()*22,v:.5+Math.random()*1.1,w:Math.random()*6,c:C[Math.floor(Math.random()*C.length)],p:0});for(let i=0;i<7;i++){add();BUBS[i].y=H-Math.random()*H}
+ const step=()=>{x.clearRect(0,0,W,H);if(BUBS.filter(b=>!b.p).length<9&&Math.random()<.04)add();
+  BUBS.forEach(b=>{if(b.p){b.p+=1;x.globalAlpha=Math.max(0,1-b.p/12);x.strokeStyle=b.c;x.lineWidth=3;for(let k=0;k<8;k++){const a=k*Math.PI/4,r=b.r+b.p*2.2;x.beginPath();x.moveTo(b.x+Math.cos(a)*b.r*.6,b.y+Math.sin(a)*b.r*.6);x.lineTo(b.x+Math.cos(a)*r,b.y+Math.sin(a)*r);x.stroke()}x.globalAlpha=1;return}
+   b.y-=b.v;b.w+=.03;const bx=b.x+Math.sin(b.w)*8;const gr=x.createRadialGradient(bx-b.r*.35,b.y-b.r*.35,2,bx,b.y,b.r);gr.addColorStop(0,'rgba(255,255,255,.95)');gr.addColorStop(.35,b.c+'aa');gr.addColorStop(1,b.c+'55');x.fillStyle=gr;x.beginPath();x.arc(bx,b.y,b.r,0,7);x.fill();x.strokeStyle='rgba(255,255,255,.8)';x.lineWidth=2;x.stroke();b.dx=bx});
+  BUBS=BUBS.filter(b=>b.p<13&&b.y>-50);GMRAF=requestAnimationFrame(step)};step();$('bubn').textContent=BUBN?tr('फोड़े')+': '+BUBN+' 🫧':''}
+document.addEventListener('pointerdown',e=>{if(e.target.id!=='bubcv')return;const cv=e.target,r=cv.getBoundingClientRect(),px=(e.clientX-r.left)*cv.width/r.width,py=(e.clientY-r.top)*cv.height/r.height;
+ const b=BUBS.find(b=>!b.p&&Math.hypot((b.dx||b.x)-px,b.y-py)<b.r+8);if(b){b.p=1;BUBN++;gmSnd(500+Math.random()*400);$('bubn').textContent=tr('फोड़े')+': '+BUBN+' 🫧'+(BUBN%10===0?'  — '+tr('शाबाश! एक गहरी साँस लीजिए 🌬️'):'');if(navigator.vibrate)navigator.vibrate(10)}});
+const CLDM=['चिंता उड़ गई ☁️ — आप हल्के हो रहे हैं।','जो आपके बस में नहीं, उसे जाने दीजिए 🌤️','बहुत अच्छा! अब एक गहरी साँस लें 🌬️','आप इस चिंता से बड़े हैं 💜'];
+document.addEventListener('click',e=>{if(e.target.closest('[data-game]')||e.target.closest('[data-free="game"]')){gmOpen();return}if(e.target.closest('#gmx')||e.target.id==='gmov'){gmClose();return}
+ const t=e.target.closest('.gmtabs button');if(t){gmTab(t.dataset.gm);return}
+ if(e.target.closest('#cldgo')){const ta=$('cldt'),v=ta.value.trim();if(!v){ta.focus();return}const c=document.createElement('div');c.className='cl';c.textContent=v.slice(0,80);$('cldsky').appendChild(c);ta.value='';gmSnd(330);
+  setTimeout(()=>{c.remove();$('cldmsg').textContent=tr(CLDM[Math.floor(Math.random()*CLDM.length)])},6000);return}
+ const sw=e.target.closest('.clrpal button');if(sw){document.querySelectorAll('.clrpal button').forEach(b=>b.classList.toggle('on',b===sw));return}
+ const pt=e.target.closest('#mand path,#mand circle');if(pt){const on=document.querySelector('.clrpal button.on');pt.setAttribute('fill',on?on.dataset.c:'#f9a8d4');gmSnd(700);return}
+ if(e.target.closest('#clrnew'))mandDraw()});
+function mandDraw(){const pal=$('clrpal');if(!pal.childNodes.length){['#f9a8d4','#fda4af','#fdba74','#fde68a','#86efac','#5eead4','#93c5fd','#c4b5fd','#f0abfc','#ffffff'].forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.dataset.c=c;b.style.background=c;if(!i)b.classList.add('on');pal.appendChild(b)})}
+ const m=$('mand'),n1=6+Math.floor(Math.random()*4)*2,n2=n1+4,sv=[];sv.push('<circle cx="0" cy="0" r="100" fill="#fff"/>');
+ for(let i=0;i<n2;i++){const a=i*360/n2;sv.push('<path transform="rotate('+a+')" d="M0,-58 C16,-70 22,-92 0,-104 C-22,-92 -16,-70 0,-58Z" fill="#fff"/>')}
+ for(let i=0;i<n1;i++){const a=i*360/n1+180/n1;sv.push('<path transform="rotate('+a+')" d="M0,-20 C20,-30 26,-52 0,-64 C-26,-52 -20,-30 0,-20Z" fill="#fff"/>')}
+ for(let i=0;i<n1;i++){const a=(i*360/n1)*Math.PI/180;sv.push('<circle cx="'+(Math.sin(a)*44).toFixed(1)+'" cy="'+(-Math.cos(a)*44).toFixed(1)+'" r="6" fill="#fff"/>')}
+ sv.push('<circle cx="0" cy="0" r="16" fill="#fff"/>');m.innerHTML=sv.join('')}
+function newDraw(){try{instDraw();remInit();vnCount();certDraw0()}catch(e){}}
+setInterval(newDraw,3000);setTimeout(newDraw,800);
+
 setLang(LANG);
 }
 </script>
@@ -1721,5 +1858,11 @@ try{const b=document.createElement('div');b.className='twk';b.setAttribute('aria
  document.body.appendChild(b)}catch(e){}
 })();
 </script>
+<div id="gmov" class="gmov" hidden><div class="gmbox"><button type="button" class="gmx" id="gmx" aria-label="बंद करें">✕</button>
+<div class="gmtabs"><button type="button" data-gm="bub" class="on">🫧 बुलबुले</button><button type="button" data-gm="cld">☁️ चिंता उड़ाओ</button><button type="button" data-gm="clr">🎨 रंग भरो</button></div>
+<div id="gm-bub" class="gmp"><div class="sub">धीरे-धीरे साँस लेते हुए बुलबुले फोड़िए 🫧</div><canvas id="bubcv" width="360" height="420"></canvas><div class="sub" id="bubn"></div></div>
+<div id="gm-cld" class="gmp" hidden><div class="sub">जो चिंता मन में है, यहाँ लिखिए — फिर उसे बादल में बैठाकर दूर भेज दीजिए ☁️</div><textarea id="cldt" rows="2" placeholder="जैसे: कल की परीक्षा"></textarea><button type="button" class="shrb" id="cldgo">☁️ उड़ा दो</button><div class="cldsky" id="cldsky"></div><div class="sub" id="cldmsg"></div></div>
+<div id="gm-clr" class="gmp" hidden><div class="sub">रंग चुनिए और पंखुड़ियों पर छूकर रंग भरिए 🌸</div><div class="clrpal" id="clrpal"></div><svg id="mand" viewBox="-110 -110 220 220"></svg><button type="button" class="shrb alt" id="clrnew">🔄 नया चित्र</button></div>
+</div></div>
 </body>
 </html>
