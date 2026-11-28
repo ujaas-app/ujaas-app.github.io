@@ -1183,13 +1183,23 @@ function scDraw(){if(!ME)return;try{
   const nw=SCP.s!==sa&&SCP.s!==undefined;
   st.innerHTML=`<div class="lb">${esc(sa?tr(STL[sa-1]):tr('आज आप कितने संतुष्ट हैं? नीचे 1 से 10 चुनें — जितनी संतुष्टि, उतना ऊँचा सूरज ☀️'))}</div>`+
   `<img class="sun" src="${fe('Sun')}" style="--sy:${sa?20+sa*13:-60}px;opacity:${sa>3?1:.35}" alt="">`+(sa&&sa<=3?`<img class="rn" src="${fe('Cloud with rain')}" alt="">`:'')+
-  `<svg class="rb" viewBox="0 0 300 155" aria-hidden="true">${arcs}</svg>`+scFace(sa,nw);
+  scGems(sa)+scFace(sa,nw);
   if(nw&&sa>=8){for(let i=0;i<9;i++){const im=document.createElement('img');im.className='ht';im.src=fe(i%3?'Red heart':'Sparkles');im.style.left=(20+Math.random()*60)+'%';im.style.animationDelay=(i*0.12)+'s';st.appendChild(im)}}
   SCP.s=sa;$('sat').querySelectorAll('button').forEach((b,i)=>b.style.setProperty('--h',[0,20,38,50,80,130,170,215,260,320][i]))}
  }catch(e){console.log('scDraw',e)}}
 
+
+function scGems(sa){const S='M0,-12 L3.5,-4 L12,-3.6 L5.6,2.2 L7.4,11 L0,6.4 L-7.4,11 L-5.6,2.2 L-12,-3.6 L-3.5,-4Z',H='M0,11 C-4,7.5 -12,2 -12,-4.2 C-12,-9 -8,-11.5 -4.6,-11.5 C-2.4,-11.5 -0.8,-10.2 0,-8.6 C0.8,-10.2 2.4,-11.5 4.6,-11.5 C8,-11.5 12,-9 12,-4.2 C12,2 4,7.5 0,11Z';
+ let g='<defs><linearGradient id="gsv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#d9dfea"/><stop offset=".7" stop-color="#9aa5ba"/><stop offset="1" stop-color="#eef2f8"/></linearGradient><linearGradient id="ghr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9fb2"/><stop offset=".4" stop-color="#ef2f55"/><stop offset=".8" stop-color="#a50e30"/><stop offset="1" stop-color="#ff6b88"/></linearGradient></defs>';
+ for(let i=0;i<10;i++){const an=Math.PI*(0.96-0.92*i/9),x=150+148*Math.cos(an),y=150-168*Math.sin(an),on=i<sa,st=i%2===0,sc=on?1.45:1.15;
+  g+='<g class="gm'+(on?' on':'')+'" style="animation-delay:'+(i*0.18).toFixed(2)+'s" transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') scale('+sc+')">'+
+   (st?'<path d="'+S+'" fill="url(#gsv)" stroke="#7c879c" stroke-width=".6"/><path d="M0,-12 L0,6.4 M-12,-3.6 L5.6,2.2 M12,-3.6 L-5.6,2.2 M-7.4,11 L0,0 L7.4,11" stroke="#fff" stroke-width=".7" opacity=".75" fill="none"/><path d="M0,-12 L3.5,-4 L0,0Z" fill="#fff" opacity=".85"/>'
+   :'<path d="'+H+'" fill="url(#ghr)" stroke="#7f0a24" stroke-width=".6"/><path d="M0,-8.6 L0,11 M-12,-4.2 L0,2 L12,-4.2 M-6,-11 L0,2 L6,-11" stroke="#ffd1db" stroke-width=".6" opacity=".6" fill="none"/><ellipse cx="-5.5" cy="-6" rx="3.2" ry="2" fill="#fff" opacity=".85" transform="rotate(-30 -5.5 -6)"/>')+
+   (on?'<circle cx="'+(st?7:8)+'" cy="-9" r="1.3" fill="#fff"/>':'')+'</g>'}
+ return '<svg class="rb gems" viewBox="0 0 300 155" aria-hidden="true">'+g+'</svg>'}
 const SCFP={kuku:[1.5,55,22],krishna:[1.5,50,30],hanuman:[1.4,50,16],guddi:[1.3,50,17],jesus:[1.3,50,13],bunny:[1.3,50,14],kitten:[1.3,50,14],pony:[1.4,40,6],sun:[1.2,50,10]};
-function scFace(sa,nw){const src=(typeof CIMG!=='undefined'&&CH&&CIMG[CH])||'';const emo=fe(sa?STF[sa-1]:'Thinking face');
+const EXI={kuku:[1,2,3,4,5].map(i=>'https:\/\/ujaas-app.github.io/audio/v/kx'+i+'.webp')};
+function scFace(sa,nw){if(EXI[CH]){const lv=!sa?3:sa<=2?1:sa<=4?2:sa<=6?3:sa<=8?4:5;return '<div class="scb b'+lv+(nw?' nw':'')+'"><img src="'+EXI[CH][lv-1]+'" alt=""><img class="scmo" src="'+fe(sa?STF[sa-1]:'Thinking face')+'" alt=""></div>'}const src=(typeof CIMG!=='undefined'&&CH&&CIMG[CH])||'';const emo=fe(sa?STF[sa-1]:'Thinking face');
  if(!src)return '<img class="fc'+(nw?' nw':'')+'" src="'+emo+'" alt="">';
  const q=SCFP[CH]||[1.3,50,10],lv=!sa?0:sa<=2?1:sa<=4?2:sa<=6?3:sa<=8?4:5;
  return '<div class="scf l'+lv+(nw?' nw':'')+'"><div class="scfi" style="background-image:url('+src+');background-size:'+(q[0]*100)+'% auto;background-position:'+q[1]+'% '+q[2]+'%"></div>'+(lv===1?'<i class="tr1">💧</i><i class="tr2">💧</i>':'')+(lv>=4?'<i class="bl1"></i><i class="bl2"></i>':'')+'<img class="scmo" src="'+emo+'" alt=""></div>'}
@@ -1994,7 +2004,7 @@ body.hasch #actline{display:none}body.hasch header h1{font-size:clamp(40px,11vw,
 .wasc .gl{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);display:flex;gap:4px;z-index:2}.wasc .gl i{width:22px;height:26px;background:var(--g) center/contain no-repeat;opacity:.35;filter:grayscale(1)}.wasc .gl i.on{opacity:1;filter:none;animation:scpop .5s both}
 .wasc .tap{position:absolute;right:10px;top:10px;z-index:2;background:#fff;border-radius:99px;padding:4px 10px;font-size:12px;font-weight:700;color:#0369a1;box-shadow:0 3px 8px rgba(0,0,0,.15)}
 /* संतुष्टि */
-.stsc{height:230px;transition:background 1s;background:linear-gradient(180deg,var(--s1,#cfd8e6),var(--s2,#eef2f7))}
+.stsc{height:250px;transition:background 1s;background:linear-gradient(180deg,var(--s1,#cfd8e6),var(--s2,#eef2f7))}
 .stsc .sun{position:absolute;left:50%;width:86px;margin-left:-43px;bottom:var(--sy,10px);transition:bottom 1.2s cubic-bezier(.3,1.3,.5,1),opacity 1s;filter:drop-shadow(0 0 24px rgba(255,200,60,.8));animation:scrot 20s linear infinite}
 @keyframes scrot{to{rotate:360deg}}
 .stsc svg.rb{position:absolute;left:50%;bottom:-6px;width:300px;transform:translateX(-50%)}
@@ -2118,6 +2128,17 @@ lbl();setTimeout(lbl,1500);document.addEventListener('click',e=>{if(e.target.clo
 @keyframes scbr{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes scbo{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(3deg)}}
 @keyframes scjm{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(-18px) scale(1.06) rotate(-4deg)}70%{transform:translateY(-6px) rotate(4deg)}}
+.stsc .scb{position:absolute;left:50%;bottom:4px;height:150px;transform:translateX(-50%);z-index:2}
+.stsc .scb>img:first-child{height:100%;width:auto;display:block;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+.stsc .scb .scmo{position:absolute;right:-30px;bottom:10px;width:44px}
+.stsc .scb.nw{animation:scpopb .7s cubic-bezier(.3,1.6,.5,1) both}
+.stsc .scb.b2>img:first-child{animation:scsl2 4s ease-in-out infinite;transform-origin:50% 100%}
+.stsc .scb.b4>img:first-child{animation:scbo 1.6s ease-in-out infinite}
+.stsc .scb.b5>img:first-child{animation:scjm .9s ease-in-out infinite}
+@keyframes scsl2{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(1deg)}}
+@keyframes scpopb{0%{transform:translateX(-50%) scale(.6);opacity:0}100%{transform:translateX(-50%) scale(1);opacity:1}}
+.stsc svg.gems{overflow:visible}.stsc .gm{opacity:.28;filter:grayscale(.6);transition:opacity .6s}.stsc .gm.on{opacity:1;filter:drop-shadow(0 2px 2px rgba(0,0,0,.35)) drop-shadow(0 0 4px rgba(255,255,255,.9));animation:gmtw 2.4s ease-in-out infinite}
+@keyframes gmtw{0%,100%{opacity:1}50%{opacity:.75}}
 </style>
 <script>
 (function(){
