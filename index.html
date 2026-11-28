@@ -2091,7 +2091,10 @@ lbl();setTimeout(lbl,1500);document.addEventListener('click',e=>{if(e.target.clo
  const wrap=(n,ret)=>{try{const f=window[n];if(typeof f!=='function')return;window[n]=function(){if(isQ())return ret;return f.apply(this,arguments)}}catch(e){}};
  ['pvPlay','cvoPlay'].forEach(n=>wrap(n,false));['speak','clap','clapSnd','drops','moSnd','scSnd','uju','say'].forEach(n=>wrap(n,undefined));
  let was=false;setInterval(()=>{const q=isQ();if(q!==was){was=q;document.body.classList.toggle('quiet',q);if(q){try{window.__stopTalk&&window.__stopTalk()}catch(e){}}}},400);})();</script>
-<style>body.quiet #uju{display:none!important}</style>
+<style>body.quiet #uju{display:none!important}body.hasch .hch{width:min(64vw,280px)!important}body.hasch .hchw::after{width:min(76vw,330px)!important}
+#ujuf svg,#ujuf img{width:132px!important;height:auto!important}.uju.perch #ujuf svg{width:116px!important;height:auto!important}
+@media(max-width:420px){#ujuf svg,#ujuf img{width:118px!important}.uju.perch #ujuf svg{width:104px!important}}
+</style>
 <script>
 (function(){
 const LS={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
